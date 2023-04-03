@@ -3,15 +3,98 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><%= htmlWebpackPlugin.options.title %></title>
-</head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Услуги и сервисы</title>
+<link href="style.css" rel="stylesheet"></head>
 <body>
 	<div class="wrapper">
-		${require("html-loader!./header.html")}
-		${require("html-loader!./menu.html")}
-		${require("html-loader!./feedback.html")}
-		${require("html-loader!./call.html")}
+		<header class="header">
+	<div class="header__container _container">
+		<div class="header__left">
+			<div class="header__menu line">
+				<button type="button" class="menu__open menu-open icon-menu"><span></span></button>
+			</div>
+			<a href="#" class="header__logo logo line"><img src="./static/logo.svg" alt="CPS"></a>
+		</div>
+		<div class="header__link-menu">
+			<div class="header__contacts contacts line">
+				<button class="contacts__contacts-link call-open link-style"></button>
+				<button class="contacts__contacts-link feedback-open link-style"></button>
+				<a href="#" class="contacts__contacts-link link-style"></a>
+			</div>
+			<div class="header__link-body">
+				<a href="#" class="header__link link-style"></a>
+				<a href="#" class="header__link link-style"></a>
+			</div>
+		</div>
+	</div>
+</header>
+			<div class="menu menu-open">
+	<div class="menu__container">
+		<div class="menu__top">
+			<button type="button" class="menu__close menu-open icon-menu"></button>
+			<a href="#" class="menu__logo logo"><img src="./static/logo.svg" alt="CPS"></a>
+			<button type="submit" class="menu__search icon-menu"></button>
+		</div>
+		<nav class="menu__body">
+		<ul class="menu__list">
+			<li class="menu__item"><a href="#" class="menu__link active">Ремонт техники</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Услуги и сервисы</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Корпоративным клиентам</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Продавцам техники</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Партнерам</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Производителям</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Наши сервисные центры</a></li>
+			<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+		</ul>
+	</nav>
+	<div class="menu__contacts contacts">
+		<button type="button" class="contacts__contacts-link menu-btn call-open link-style"></button>
+		<button type="button" class="contacts__contacts-link menu-btn feedback-open link-style"></button>
+		<a href="#" class="contacts__contacts-link link-style"></a>
+	</div>
+	<div class="menu__info">
+		<a href="mailto:mail@cps.com" class="menu__email-link">mail@cps.com</a>
+		<a href="tel:88008908900" class="menu__tel">8 800 890 8900</a>
+	</div>
+	<div class="menu__language-body">
+		<button type="button" class="menu__language active">RU</button>
+		<button type="button" class="menu__language">EN</button>
+		<button type="button" class="menu__language">CH</button>
+	</div>
+	</div>
+</div>
+		<div class="feedback feedback-open">
+	<div class="feedback__container">
+		<button type="button" class="feedback__close feedback-open icon-menu"></button>
+		<h2 class="feedback__title _title-bold">Обратная связь</h2>
+		<form action="#" method="post" class="feedback__form">
+			<input autocomplete="on" type="text" required placeholder="Имя" class="feedback__name input-style">
+			<input autocomplete="on" type="tel" required placeholder="Телефон" class="feedback__phone input-style">
+			<input autocomplete="on" type="email" required placeholder="Электронная почта" class="feedback__email input-style">
+			<textarea placeholder="Сообщение" class="feedback__message input-style"></textarea>
+			<div class="feedback__text send-agree">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></div>
+			<div class="feedback__button button-style">
+				<input type="submit" value="отправить" class="feedback__input-button">
+				<span></span>
+			</div>
+		</form>'
+	</div>
+</div>
+		<div class="call call-open">
+	<div class="call__container">
+		<button type="button" class="call__close call-open icon-menu"></button>
+		<div class="call__title _title-bold">Заказать звонок</div>
+		<form action="#" method="post" class="call__form">
+			<input autocomplete="on" type="tel" required placeholder="Телефон" class="call__input input-style">
+			<div class="call__text send-agree">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></div>
+			<div class="call__button button-style">
+				<input type="submit" value="отправить" class="call__input-button">
+				<span></span>
+			</div>
+		</form>
+	</div>
+</div>
 		<div class="content-body">
 			<main class="page">
 				<div class="page__services services">
@@ -141,8 +224,14 @@
 						</div>
 					</section>
 			</main>
-			${require("html-loader!./footer.html")}
+			<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__copyright"><span>© 2019 CPS</span> Разработано командой Apesong </div>
+		<div class="footer__privacy">Политика конфиденциальности</div>
+		<div class="footer__info">Информация, размещенная на данной странице, не является публичной офертой</div>
+	</div>
+</footer>
 		</div>
 	</div>
-</body>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
