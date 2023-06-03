@@ -1,2 +1,2 @@
 # 1.6
-1.6 https://nonjaey.github.io/1.6/dist/
+1.6 https://romantukhlin.github.io/1.6/dist/
